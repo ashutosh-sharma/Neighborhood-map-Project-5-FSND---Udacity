@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Neighbourhood map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href=".\assets\images\icon.png" />
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Linking google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="side_bar col-sm-4 col-md-4 col-lg-3">
+                <h2 class="side_header text-center">Chandigarh</h2>
+                <hr>
+                <h4 class="place_header text-center">
+                    Chandigarh is the best-planned city in India, with architecture which is world-renowned, and a quality of life, which is
+                    unparalleled.
+                </h4>
+                <hr>
+                <br>
+                <br>
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="search_bar text-center">
+                                <!-- Using knockout data-bind to apply dynamic searching in the list -->
+                                <input type="text" placeholder="🔎 Search" type="search" data-bind="value: searchString, valueUpdate:'afterkeydown', event: {keyup:searchBar}"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group text-center" data-bind="foreach: markers">
+                                <div data-bind="if: show">
+                                    <li class="list-group-item">
+                                        <a href="#" data-bind="click: $parent.putInfoWindow">
+                                            <strong data-bind="text: title"></strong>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-9 mapContent">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Linking KnockoutJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+
+    <!-- Linking js files -->
+    <script src="js/app.js"></script>
+
+    <!-- This will load map in background without effecting the html load and 
+        the callback function will be called as soon as API done loading -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFxq_NB-zm9l1rq8ARhEW5lpOwjVUsMEs&v=3&callback=initMap"
+        onerror="mapLoadError()" defer></script>
+
+    <!-- jQuery library -->
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest minified bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Linking font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</body>
+
+</html>

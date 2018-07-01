@@ -1,0 +1,58 @@
+* {
+  font-size: 2vh;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  left: 0px;
+  background-color: grey;
+}
+
+.side_bar {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  background-color: #36688D;
+  color: #F18904;
+}
+
+.side_header {
+  width: 100%;
+  font-weight: bolder;
+  color: #F3CD05;
+  height: 6%;
+}
+
+.place_header {
+  color: white;
+}
+
+.mapContent {
+  padding: 0 !important;
+}
+
+.list_item a:hover {
+  text-decoration: none;
+  color: hotpink;
+}
+
+.search_bar {
+  height: 6vh;
+}
+
+.search_bar input[type=text] {
+  width: 100%;
+  border: none;
+  margin-right: 16px;
+  font-size: 3vh;
+  text-align: center;
+  height: 100%;
+}
+
+.page_footer {
+  bottom: 0;
+  left: 0;
+  background: black;
+  color: white;
+  text-align: center;
+}
