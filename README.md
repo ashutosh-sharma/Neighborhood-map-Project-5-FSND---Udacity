@@ -5,7 +5,7 @@
 A single page web-application featuring a map of neighborhood, having functionalities including highlighted locations, third-party data about those locations and various ways to browse the content.
 
 ## What I learned?
-- How **design patterns assist** in developing a manageable codebase
+- How **design patterns** assist in developing a manageable codebase
 - How **frameworks** can decrease the time required developing an application and provide a number of utilities for you to use
 - Implement **third-party APIs** that provide valuable data sets that can improve the quality of your application.
 ---
