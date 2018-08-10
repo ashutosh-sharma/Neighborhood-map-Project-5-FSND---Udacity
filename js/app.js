@@ -205,7 +205,10 @@ var viewModel = function() {
     }
 
     this.searchBar = function() {
-
+        
+        infoWindow.marker = null;
+        infoWindow.close();
+        
         // taking input
         var searchStr = this.searchString();
 
